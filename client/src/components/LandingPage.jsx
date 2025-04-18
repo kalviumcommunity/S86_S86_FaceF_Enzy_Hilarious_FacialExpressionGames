@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const features = [
   { emoji: '😄', title: 'Smile Sprint', description: 'Race a character by smiling as wide as you can.' },
@@ -30,7 +31,14 @@ const LandingPage = () => {
         ))}
       </div>
 
-      <p className="mt-10 text-md text-gray-600 italic">Get ready for fun, laughter, and unforgettable moments! 🚀</p>
+      {/* Button to Dashboard */}
+      <Link to="/dashboard">
+        <button className="mt-12 px-6 py-3 bg-purple-600 text-white text-lg font-semibold rounded-full shadow hover:bg-purple-700 transition">
+          Go to Dashboard 🚀
+        </button>
+      </Link>
+
+      <p className="mt-10 text-md text-gray-600 italic">Get ready for fun, laughter, and unforgettable moments!</p>
     </div>
   );
 };
